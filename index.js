@@ -1,4 +1,4 @@
 const fs = require('fs');
 
 
-fs.mkdirSync('dist');
+fs.mkdirSync('test-abc');
