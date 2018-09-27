@@ -1,0 +1,24 @@
+@import '~styles/_utils.less';
+@import '~styles/_colors.less';
+
+:local(.mg-label) {
+  @mg-label-color: #000;
+  @required-star-color: #ae2626;
+
+  display: inline-block;
+
+  .mg-label {
+    margin: 0;
+    .mainFont(700, normal);
+    font-size: 19px;
+    color: @mg-label-color;
+
+    &.has-error {
+      color: @brand-error-color;
+    }
+
+    .required-star {
+      color: @required-star-color;
+    }
+  }
+}

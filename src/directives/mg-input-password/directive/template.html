@@ -1,0 +1,34 @@
+<div class="{{vm.style['mg-input-password']}}">
+
+    <div class="row">
+        <div ng-class="vm.showForgotPassword ? 'col-xs-6' : 'col-xs-12'">
+            <mg-label input-id="{{::vm.inputId}}"
+                      input-label="{{::vm.inputLabel}}"
+                      is-required="{{::vm.isRequired}}"
+                      has-error="{{vm.errorMessage}}">
+            </mg-label>
+        </div>
+        <div class="password-link col-xs-6 text-right forgot-password"
+             ng-if="vm.showForgotPassword"
+             ng-click="vm.onForgotPasswordClick()">Forgot Password?</div>
+    </div>
+
+    <mg-input input-id="{{::vm.inputId}}"
+              type="{{vm.passwordVisible ? 'text' : 'password'}}"
+              input-placeholder="{{::vm.inputPlaceholder}}"
+              model="vm.model"
+              error-message="vm.errorMessage"
+              hide-error-message>
+    </mg-input>
+
+    <div class="row">
+        <div class="password-link"
+             ng-class="vm.errorMessage ? 'col-xs-6' : 'col-xs-12'"
+             ng-click="vm.togglePasswordVisibility()">
+            {{vm.passwordVisible ? 'Hide' : 'Show'}} password as you type.
+        </div>
+        <div class="col-xs-6" ng-if="vm.errorMessage">
+            <mg-error-message message="{{vm.errorMessage}}"></mg-error-message>
+        </div>
+    </div>
+</div>

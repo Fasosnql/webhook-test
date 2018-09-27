@@ -1,0 +1,10 @@
+<div ng-repeat="radioButton in vm.data.radioButtons">
+    <mg-radio attr-id="{{::radioButton.id}}"
+              attr-value="radioButton.value"
+              attr-disabled="radioButton.disabled"
+              attr-model="vm.data.model"
+              attr-name="mg-radio-id"
+              attr-change="radioButton.onChange(vm.data.model)">
+        {{::radioButton.transclude}}
+    </mg-radio>
+</div>

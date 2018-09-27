@@ -1,0 +1,12 @@
+<div>
+    <strong>input value</strong>
+    <div class="well">{{::vm.data.value}}</div>
+</div>
+<div>
+    <strong>raw formatted value</strong>
+    <div class="well">{{::vm.data.value | nl2br}}</div>
+</div>
+<div>
+    <strong>ng-bind formatted value</strong>
+    <div class="well" ng-bind-html="vm.data.value | nl2br | trustAsHtml"></div>
+</div>

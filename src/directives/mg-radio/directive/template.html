@@ -1,0 +1,17 @@
+<div class="{{vm.style['mg-radio']}}"
+     ng-class="{'disabled': vm.disabled}">
+    <input type="radio"
+           ng-attr-id="{{::vm.id}}"
+           ng-value="vm.value"
+           ng-model="vm.model"
+           ng-disabled="vm.disabled"
+           name="{{::vm.name}}"
+           class="mg-radio"
+           ng-class="vm.model === vm.value ? 'checked' : 'unchecked'"
+           ng-change="vm.change()"/>
+    <label ng-attr-for="{{::vm.id}}"
+           class="mg-radio-label"
+           ng-click="vm.click()">
+        <span class="transclude" ng-transclude></span>
+    </label>
+</div>

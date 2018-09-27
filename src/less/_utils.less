@@ -1,0 +1,42 @@
+.retina-display(@rules) {
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+    @rules();
+  }
+}
+
+.text-ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mainFont(@weight: 400, @style: normal) {
+  font-family: 'OpenSans', Arial, sans-serif;
+  font-weight: @weight !important;
+  font-style: @style !important;
+}
+
+.placeholder(@color: #000, @font: GothamBold) {
+  &::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: @color;
+    font-family: @font;
+  }
+  &:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: @color;
+    font-family: @font;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: @color;
+    font-family: @font;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: @color;
+    font-family: @font;
+  }
+}

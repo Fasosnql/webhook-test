@@ -1,0 +1,17 @@
+@import '~styles/_utils.less';
+
+:local(.mg-input-constraint) {
+  @input-constraint-color: #383838;
+
+  display: inline-block;
+  float: right;
+
+  .input-constraint {
+    margin-top: 11px;
+    margin-bottom: -3px;
+    font-size: 16px;
+    .mainFont(400, italic);
+    color: @input-constraint-color;
+    text-align: right;
+  }
+}

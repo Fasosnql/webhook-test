@@ -1,0 +1,22 @@
+<div class="{{vm.style['mg-input']}}"
+     ng-class="{'has-error': vm.errorMessage}">
+    <mg-label ng-if="vm.inputLabel"
+              input-id="{{::vm.inputId}}"
+              input-label="{{::vm.inputLabel}}"
+              is-required="{{::vm.isRequired}}"
+              has-error="{{vm.errorMessage}}">
+    </mg-label>
+    <mg-input-constraint ng-if="vm.inputConstraint"
+                         input-constraint="{{::vm.inputConstraint}}">
+    </mg-input-constraint>
+    <input ng-attr-type="{{vm.type || 'text'}}"
+           class="mg-input"
+           ng-attr-id="{{::vm.inputId}}"
+           ng-model="vm.model"
+           placeholder="{{::vm.inputPlaceholder}}"
+           maxlength="{{::vm.inputConstraint}}"
+           ng-change="vm.resetError()"/>
+    <mg-error-message ng-if="vm.errorMessage && vm.showMessage"
+                      message="{{::vm.errorMessage}}">
+    </mg-error-message>
+</div>

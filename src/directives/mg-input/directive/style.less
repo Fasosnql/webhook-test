@@ -1,0 +1,33 @@
+@import '~styles/_utils.less';
+@import '~styles/_colors.less';
+
+:local(.mg-input) {
+  @mg-input-color: #000;
+  @input-border-color: #929292;
+  @input-border-color-darken: #474747;
+  @mg-input-container-font-size: 19px;
+  @mg-input-container-border-color: @input-border-color;
+  @mg-input-container-height: 50px;
+
+  @mg-input-outside-font-size: 25px;
+  @mg-input-outside-border-color: @input-border-color-darken;
+  @mg-input-outside-height: 52px;
+
+  &.has-error {
+    .mg-input {
+      border: 2px solid @brand-error-color;
+    }
+  }
+
+  .mg-input {
+    color: @mg-input-color;
+    font-size: @mg-input-container-font-size;
+    border: 2px solid @mg-input-container-border-color;
+    padding: 5px 10px;
+    width: 100%;
+    height: @mg-input-outside-height;
+    outline: 0;
+    .mainFont(600);
+    .placeholder(@mg-input-color, 400);
+  }
+}

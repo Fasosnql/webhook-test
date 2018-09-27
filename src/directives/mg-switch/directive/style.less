@@ -1,0 +1,39 @@
+@import '~styles/_utils.less';
+
+:local(.mg-switch) {
+  display: inline-block;
+
+  .mg-switch-checkbox {
+    display: none;
+
+    & + .mg-switch-label {
+      padding: 6px 0px 0px 101px;
+      height: 43px;
+      font-size: 19px;
+      color: #000000;
+      font-family: 'OpenSans', Arial, sans-serif;
+      font-weight: 700 !important;
+      font-style: normal !important;
+      display: inline-block;
+      line-height: 40px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+
+    &:checked + .mg-switch-label {
+      background-position: 0 -49px;
+    }
+  }
+
+  .mg-switch-label {
+    margin-bottom: 0;
+    background-size: 101px auto;
+    background-image: url('~img/buttons_on_off.png');
+    .retina-display({
+      background-image: url('~img/buttons_on_off@2x.png');
+      background-size: 101px auto;
+    });
+  }
+}

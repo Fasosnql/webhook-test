@@ -1,0 +1,11 @@
+<div ng-repeat="value in vm.data.values track by $index">
+    <div>
+        <strong>input value</strong>
+        <div class="well">{{::value}}</div>
+    </div>
+    <div>
+        <strong>formatted value</strong>
+        <div class="well">{{::value | convert12to24}}</div>
+    </div>
+    <hr />
+</div>

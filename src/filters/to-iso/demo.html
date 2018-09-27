@@ -1,0 +1,11 @@
+<div ng-repeat="value in vm.data.values">
+    <div>
+        <strong>input value</strong>
+        <div class="well">{{::value}}</div>
+    </div>
+    <div>
+        <strong>formatted value</strong>
+        <div class="well">{{::value | toISO: vm.data.convert}}</div>
+    </div>
+    <hr />
+</div>

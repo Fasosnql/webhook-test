@@ -1,0 +1,17 @@
+<div style="width: 300px;">
+    <div ng-repeat="data in vm.data">
+        <mg-checkbox model="data.model"
+                     ng-attr-attr-id="{{data.id || 'mg-checkbox'}}"
+                     attr-value="data.value"
+                     attr-name="mg-checkbox"
+                     attr-change="data.changeCallback('change')"
+                     attr-click="data.clickCallback('click')"
+                     attr-checked="data.checked"
+                     attr-disabled="data.disabled"
+                     ellipsis-enabled="data.ellipsisEnabled"
+                     word-wrap-enabled="data.wordWrapEnabled"
+                     ng-attr-attr-type="{{data.type}}">
+            {{::data.text}}
+        </mg-checkbox>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="{{vm.style['mg-switch']}}"
+     ng-class="{'disabled': vm.attrDisabled}">
+    <input type="checkbox"
+           ng-attr-name="{{::vm.inputName}}"
+           class="mg-switch-checkbox"
+           ng-class="vm.model ? 'toggled-on' : 'toggled-off'"
+           ng-attr-id="{{::vm.inputId}}"
+           ng-model="vm.model"
+           ng-disabled="vm.attrDisabled"
+           ng-click="vm.clickCallback(vm.fieldName)"
+           ng-change="vm.changeCallback(vm.model, vm.fieldName)">
+    <label class="mg-switch-label"
+           ng-attr-for="{{::vm.inputId}}">
+    </label>
+</div>

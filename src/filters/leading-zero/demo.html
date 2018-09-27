@@ -1,0 +1,8 @@
+<div>
+    <strong>input value</strong>
+    <div ng-if="vm.data" class="well">{{::vm.data.value}}</div>
+</div>
+<div>
+    <strong>formatted value</strong>
+    <div ng-if="vm.data" class="well">{{::vm.data.value | leadingZero}}</div>
+</div>

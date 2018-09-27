@@ -1,0 +1,15 @@
+<div ng-repeat="param in vm.data.paramsArray">
+    <div>
+        <strong>input value</strong>
+        <div class="well">
+            <code>{{::vm.data.array}}</code>
+        </div>
+    </div>
+    <div>
+        <strong>formatted value</strong>
+        <div class="well">
+            <code>{{::vm.data.array | sortMultiple: param}}</code>
+        </div>
+    </div>
+    <hr />
+</div>

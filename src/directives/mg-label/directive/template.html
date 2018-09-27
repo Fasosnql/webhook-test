@@ -1,0 +1,10 @@
+<div class="{{vm.style['mg-label']}}">
+    <label ng-if="vm.inputLabel"
+           for="{{::vm.inputId}}"
+           class="mg-label"
+           ng-class="{'has-error': vm.hasError}">
+        <span class="label-text">{{::vm.inputLabel}}</span>
+        <span ng-if="vm.isRequired"
+              class="required-star">*</span>
+    </label>
+</div>

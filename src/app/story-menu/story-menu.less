@@ -1,0 +1,32 @@
+:local(.story-menu) {
+  width: 350px;
+  background: rgba(0,0,0,.1);
+  float: left;
+  height: 100vh;
+  overflow-y: auto;
+
+  .children {
+    .component {
+      padding: 5px 15px 5px 0;
+    }
+
+    li a {
+      padding-left: 40px;
+    }
+
+    .children {
+      li a {
+        padding: 5px 60px;
+      }
+    }
+  }
+
+  .item {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+
+    .item-tile {
+      padding: 10px 15px 5px 15px;
+    }
+  }
+}
