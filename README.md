@@ -86,3 +86,4 @@ Then, create a tag (using new version from `package.json` file that will point t
  - Write MORE Tests
  - Make storybook looks better
  - Establish CI for automatic tests run, build, version bump & deploy
+ .
